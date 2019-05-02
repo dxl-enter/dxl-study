@@ -100,12 +100,81 @@
   8.1 MySQL数据库客户端基础
     （1）www.mysql.com -> downlods -> mysql community -> mysql workbench
   8.2 MySQL创建表
+    create table 数据库名.表名(
+      `id` int not null auto_increment comment '',
+      primary key(`id`) comment ''
+    );
   8.3 MySQL函数SQL语句
+    count(*):查询的数据有几条
+    min(birthdate):求最小值
+    表名.*: 返回表中的其他数据
+    max():求最大值
+    sum():求和
   8.4 MYSQL条件查询
+    where 列名 between ‘’ and ‘’ ： 中间
+    where 列名 like ‘%王%’：%表示通配符，表示字符串中含有王这个字（模糊查询）数据库效率比较低
   8.5 MYSQL复杂条件查询
+    排序：order by 列名 desc(倒序)/asc(正序，默认)
+    多个数据表操作时，必须有关联的字段：
+    select * from 表名1，表名2 where 表名1.classid = 表名2.id
+    *会消耗数据库性能，网络的性能
+    leftjoin：
+    select * from 表名1 left join 表名2 on 表名1.classid = 表名2.id
+    mysql用join on比较多
 09 EcmaScript6
   9.1 ES6简介与环境搭建
+    kangax.github.io/compat-table/es6   查看js支持情况
+    解码器：traceur 、babel
+    shim和polyfill 、css polyfill
   9.2 ES6编程风格【上】
+    （1）const、let
+      const：常量（不能被赋值=，但可以加东西push），建议使用
+      优点：可以提醒大家 不能被改变
+      比较符合函数式编程
+      本质的区别：编译器内部处理机制不同
+    （2）对象解构
+      {a,b} = a
+    （3）字符串模版
+      // 不用使用+连接字符串
+      const s = "hello"
+      const e = "world"
+      const c = `foor ${a} ${b} bar`
+      function test(strs,...values){
+        console.log(values); // ["hello","world"]
+        console.log(strs);   // ["foor","","bar"]
+      }
+      startswith（开始检测）、 endsWith（结尾检测）、includes（是否包括）
+    （4）对象和数组
+      const s = "12"
+      const test = [6,...s]  //[6, "1", "2"]
+      const k = "arr"
+      array.from():把类似数组的字符串转换成数组
+      ["","",...s]
+      const result={[k+1]:1,s,test} // {arr1: 1, s: "12", test: [6, "1", "2"]}
+      // 对象中添加属性
+      const s={}
+      object.assign(a,{x:3})
+      //对象其他
+      object.is(nan,nan)：是否相等
+      object.create:创建对象原型链的副本
+      object.setprototypeof(sunday,drink) //设置原型链
+      let sunday = {__proto__:对象名}      //设置原型链
+      // 继承
+      let sunday = {__proto__:对象名，getdrink(){return super.getdrink + "coffi"}}
+    （5）函数
+      const fn = function pp(){}
+      console.log(fn.name) // pp
+      // 箭头函数
+      const result = [1,2,3].map((index)=>index*3)
+      console.log(result) //[3,6,9]
+      // 函数的参数
+      function test(a=1,{opteions=true}={}){console.log(options)}
+      test(30,{options:111}) //111
+      // 变形为
+      function test(...result){console.log(result)} //[30,{options:111}]
   9.3 ES6编程风格【中】
+    
+    
+    
   9.4 ES6编程风格【下】
 10 专题一.JavaScript语言新发展【深度实践课】
