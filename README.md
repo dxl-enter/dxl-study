@@ -450,6 +450,10 @@
     （7）闭包为什么会内存泄漏
       ie6内核：最典型的内存泄漏问题是循环引用：a引用了b，b引用了c，c引用了d，d又引用了a，这样会产生死循环的引用，而这个引用在浏览器的回收机制中叫做标记清除法
     （8）函数式编程
-    （9）
+      《javascript函数式编程》 
+    （9）小技巧
+      如果直接调用fn():则this指向window，如果是obj.fn()：则this指向.之前的对象也就是obj
+      如果this.date = undefeated 那么this.date.name 就会报错
+      
   10.4 ES6在企业中的应用
   10.5 TypeScript前世今生
