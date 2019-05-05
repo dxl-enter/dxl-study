@@ -1,6 +1,40 @@
 # dxl-study
 01 专题一.JavaScript语言新发展【直播课】
 02 精英班预读班
+  2.1 【录播】你不知道的HTML
+    什么是同源：协议相同、域名相同、端口相同（http://www.ruanyifeng.com/blog/2016/04/same-orgin-policy.html）
+    浏览器不同的域名间不能访问彼此的cookie ，但是内部的表单没有限制
+    限制范围：cookie、localstoryge、indexdb无法读取；dom无法获取；ajax请求不能发送
+    如何设置同源策略（hosts）：domain 是最最实用的策略
+      test.xxx.com a.html
+      <script>document.domain = 'xxx.com';//设置同源策略document.cookie = "test1=hello";</script>
+      test2.xxx.com b.html
+      <script>document.cookie; //test1=hello</script>
+    可以实现跨域：
+      img：
+        var s = new Image();
+        var p = Date.now();
+        s.src = "http://www.baidu.com/s.gif";
+        s.onload = function(){
+          var end = Date.now();
+          t = end - p;
+        }
+      iframe：
+      link：css攻击漏洞（background）、伪造
+      script（jsonp（jsonp原理））：
+    语义化：（http://www.cnblogs.com/freeyiyi1993/p/3615179.html）给爬虫写
+      实用div进行布局，不要用div进行无意义的包裹 span行内常见的元素
+      header、nav、article、aside、section、footer
+      <header><nav></nav></header><div class="content"><section></setion><aside></aside></div><footer></footer>
+      尽量少写html一定要少写：html第一减少dom渲染的时间 减少整个文件大小。一个html元素最少最少顶三个元素用
+  2.2 【录播】CSS3构建3D的世界
+  2.3【录播】CSS高级实用技巧【上】
+  2.4【录播】CSS高级使用技巧【下】
+  2.5【录播】CSS与数学的巧妙运用
+  2.6【录播】ES5核心技术
+  2.7【录播】jQuery技术内幕
+  2.8【录播】走进后端工程师的世界
+  2.9【录播】常用后端语言介绍
 03 Linux基础入门
 04 EcmaScript5.1新增语法【上】
 05 EcmaScript5.1新增语法【下】
