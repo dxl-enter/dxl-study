@@ -2,16 +2,21 @@
 ## 01 专题一.JavaScript语言新发展【直播课】
 ## 02 精英班预读班
   ### 2.1 【录播】你不知道的HTML
-    >>>>>>>>>>什么是同源：协议相同、域名相同、端口相同（http://www.ruanyifeng.com/blog/2016/04/same-orgin-policy.html）
-    浏览器不同的域名间不能访问彼此的cookie ，但是内部的表单没有限制
-    限制范围：cookie、localstoryge、indexdb无法读取；dom无法获取；ajax请求不能发送
-    如何设置同源策略（hosts）：domain 是最最实用的策略
+    - 什么是同源：协议相同、域名相同、端口相同（http://www.ruanyifeng.com/blog/2016/04/same-orgin-policy.html）
+    - 浏览器不同的域名间不能访问彼此的cookie ，但是内部的表单没有限制
+    - 限制范围：cookie、localstoryge、indexdb无法读取；dom无法获取；ajax请求不能发送
+    - 如何设置同源策略（hosts）：domain 是最最实用的策略
+      (```)
       test.xxx.com a.html
       <script>document.domain = 'xxx.com';//设置同源策略document.cookie = "test1=hello";</script>
+      (```)
+      (```)
       test2.xxx.com b.html
       <script>document.cookie; //test1=hello</script>
-    可以实现跨域：
+      (```)
+    - 可以实现跨域：
       img：
+      (```)
         var s = new Image();
         var p = Date.now();
         s.src = "http://www.baidu.com/s.gif";
@@ -19,6 +24,7 @@
           var end = Date.now();
           t = end - p;
         }
+      (```)
       iframe：
       link：css攻击漏洞（background）、伪造
       script（jsonp（jsonp原理））：
