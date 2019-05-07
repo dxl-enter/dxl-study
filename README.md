@@ -10,115 +10,116 @@
 test.xxx.com a.html
 <script>document.domain = 'xxx.com';//设置同源策略document.cookie = "test1=hello";</script>
 ```
-    (```)
-      test2.xxx.com b.html
-      <script>document.cookie; //test1=hello</script>
-    (```)
-    - 可以实现跨域：
-      img：
-      (```)
-        var s = new Image();
-        var p = Date.now();
-        s.src = "http://www.baidu.com/s.gif";
-        s.onload = function(){
-          var end = Date.now();
-          t = end - p;
-        }
-      (```)
-      iframe：
-      link：css攻击漏洞（background）、伪造
-      script（jsonp（jsonp原理））：
-    语义化：（http://www.cnblogs.com/freeyiyi1993/p/3615179.html）给爬虫写
-      实用div进行布局，不要用div进行无意义的包裹 span行内常见的元素
-      header、nav、article、aside、section、footer
-      <header><nav></nav></header><div class="content"><section></setion><aside></aside></div><footer></footer>
-      尽量少写html一定要少写：html第一减少dom渲染的时间 减少整个文件大小。一个html元素最少最少顶三个元素用
-  2.2 【录播】CSS3构建3D的世界
-    淘宝造物节、h5doo、720yun
-    html5陀螺仪：
-      陀螺仪又叫角度传感器，是不同于加速度计（G-sensor）的，它的测量物理量是旋转、倾斜是的转动角速度。在手机上，仅用加速度计没办法测量或重构出完整3d动作，测不到转动的动作的。G-sensor只能检测轴向的线性动作。但陀螺仪可以对转动、偏转的动作做很好的测量。这样就可以精确分析判断出使用者的实际动作。而后根据动作，可以对手机做响应的操作。
-      垂直于手机屏幕：gamma z轴为轴，alpha的作用域为（0，360）
-      垂直于耳机口：alpha y轴为轴，gamma的作用域为（-180，180）
-      垂直于sim卡槽：beta x轴为轴，beta的作用域为（-90，90）
-      deviceorientation：设备的物理方向信息，表示为一系列本地坐标的旋角
-      devicemotion：提供设备的加速信息
-      compassneedscalibration：用于通知web站点使用罗盘信息校准上述事件
-      重力加速度：是一个物体受重力作用的情况下所具有的加速度。与位置有关（G=mg）（其中g=9.80665m/s^2为标准重力加速度）s = GM/r*r
-    css3 3D模型（css3d-engine）
-      球面投影：在三维空间，每个3d模型都等同于一个多面体（即3d模型只能由不弯曲的平面构成），你只能以一个正多边形表示圆，边越多，圆越完美3200*1600的图切成一片一片的。如果把图切成9份（宽度是210px），拼成一个圆时每个图片之间的夹角是40度，每个图片离圆心的位置是288px（利用tan）
-      立方体投影：1600*1600的图切成一个正方形一个正方形
-    集合touth事件
-    javascript 库：parallax：通过视觉差构建
-  2.3【录播】CSS高级实用技巧【上】
-    (1)早期的双飞翼布局+css hack
-      position float 负边距 等高(padding-bottom:9999px;margin-bottom:-9999px;在container{overflow:hidden}) 盒子模型(margin不会影响盒子模型) 清除浮动【《css那些事儿》】
-      垂直居中：
-      伸缩盒：
-        flexible box：box-orient box-pack box-align box-flex box-flex-group box-ordinal-group box-direction box-lines
-        flexible(新): flex flex-group flex-shrink flex-basis flex-flow flex-direction  flex-wrap align-content align-items align-self justify-content order
-    (2)基于移动端的px和rem转换兼容方案
-      different size different DPR
-      目前的设计稿一般是640 750 1125 ，一般要先均分成100份，（兼容vh，vm）750/10 = 75px。div宽是240px*120px css的书写改成3.2rem*1.6rem。配合响应式修改html根的大小
-      字体不建议使用rem的，data-dpr属性动态设置字体大小。屏幕变大放更多的文字，或者屏幕更大放更多的字。
-      神奇的padding margin-top等比例缩放间距
-    (3)弹性盒子模型与reset的选择
-      flex模型
-      *的杀伤力太大！！！！
-      reset.css重置 normalize.css修复 Neat.css融合了重置和修复
-      html{box-sizing:border-box;}
-      *,*:before,*:after{box-sizing:inherit;} //继承html
-    (4)自制的icon-font与常用字体排版
-      no-image时代，不要超过纯色为2的图片（http://csscon.space/#/）
-      宋体非宋体，黑体非黑体 windows下的宋体叫中易宋体simsun，mac是华文宋体STSong。windows下的黑体叫中易黑体simhei，mac是华文黑体STHeiti
-      不要只写中文字体名，保证西文字体在中文字体前面。mac -> linux -> windows
-      切记不要直接使用设计师psd的设计font-family，关键时刻再去启动font-fase（typo.css entry.css type.css）
-      font-family：sans-serif；系统默认
-    (5)css代码检测与团队项目规范（css lint）
-    (6)css绘制特殊图形 高级技巧
-      border border-radius造就万千可能
-      after、before任何一个html元素都可以创造3个可以供我们操作的视觉元素，即三个矩形
-      box-shadow是可以定义为任何颜色的，并且同一个元素可以投影出不同的box-shabow
-      神奇borders构建的三角形
-      矩形的四条border，不一定永远是一个长条矩形的形状。它在正常情况下是一个梯形的形状，在我们改变这条边相邻的另外两条边的参数时，它的形状会相应得到改变。当我们在这条边的两个顶点加一些borber-radius圆角值的时候，这个形状还会有更奇异不可预知的形变。
-    (7)BFC IFC GFC FFC
-      BFC:(就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素)
+```
+test2.xxx.com b.html
+<script>document.cookie; //test1=hello</script>
+```
+* 可以实现跨域：
+	- img：
+	```
+	var s = new Image();
+	var p = Date.now();
+	s.src = "http://www.baidu.com/s.gif";
+	s.onload = function(){
+	  var end = Date.now();
+	  t = end - p;
+	}
+	```
+	- iframe：
+	- link：css攻击漏洞（background）、伪造
+	- script（jsonp（jsonp原理））：
+		1. 语义化：（http://www.cnblogs.com/freeyiyi1993/p/3615179.html）给爬虫写
+		2. 使用div进行布局，不要用div进行无意义的包裹 span行内常见的元素
+		3. header、nav、article、aside、section、footer```<header><nav></nav></header><div class="content"><section></setion><aside></aside></div><footer></footer>```
+		4. 尽量少写html一定要少写：html第一减少dom渲染的时间 减少整个文件大小。一个html元素最少最少顶三个元素用
+
+### 2.2 【录播】CSS3构建3D的世界
+* 淘宝造物节、h5doo、720yun
+* html5陀螺仪：
+	- 陀螺仪又叫角度传感器，是不同于加速度计（G-sensor）的，它的测量物理量是旋转、倾斜是的转动角速度。在手机上，仅用加速度计没办法测量或重构出完整3d动作，测不到转动的动作的。G-sensor只能检测轴向的线性动作。但陀螺仪可以对转动、偏转的动作做很好的测量。这样就可以精确分析判断出使用者的实际动作。而后根据动作，可以对手机做响应的操作。
+	- 垂直于手机屏幕：gamma z轴为轴，alpha的作用域为（0，360）
+	- 垂直于耳机口：alpha y轴为轴，gamma的作用域为（-180，180）
+	- 垂直于sim卡槽：beta x轴为轴，beta的作用域为（-90，90）
+	- deviceorientation：设备的物理方向信息，表示为一系列本地坐标的旋角
+	- devicemotion：提供设备的加速信息
+	- compassneedscalibration：用于通知web站点使用罗盘信息校准上述事件
+	- 重力加速度：是一个物体受重力作用的情况下所具有的加速度。与位置有关（G=mg）（其中g=9.80665m/s^2为标准重力加速度）s = GM/r*r
+* css3 3D模型（css3d-engine）
+	- 球面投影：在三维空间，每个3d模型都等同于一个多面体（即3d模型只能由不弯曲的平面构成），你只能以一个正多边形表示圆，边越多，圆越完美3200*1600的图切成一片一片的。如果把图切成9份（宽度是210px），拼成一个圆时每个图片之间的夹角是40度，每个图片离圆心的位置是288px（利用tan）
+	- 立方体投影：1600*1600的图切成一个正方形一个正方形
+* 集合touth事件
+* javascript 库：parallax：通过视觉差构建
+
+###2.3【录播】CSS高级实用技巧【上】
+* 早期的双飞翼布局+css hack
+	- position float 负边距 等高(padding-bottom:9999px;margin-bottom:-9999px;在container{overflow:hidden}) 盒子模型(margin不会影响盒子模型) 清除浮动【《css那些事儿》】
+	- 垂直居中：
+	- 伸缩盒：
+	```flexible box：box-orient box-pack box-align box-flex box-flex-group box-ordinal-group box-direction box-lines```
+```flexible(新): flex flex-group flex-shrink flex-basis flex-flow flex-direction  flex-wrap align-content align-items align-self justify-content order```
+* 基于移动端的px和rem转换兼容方案
+	- different size different DPR
+	- 目前的设计稿一般是640 750 1125 ，一般要先均分成100份，（兼容vh，vm）750/10 = 75px。div宽是240px*120px css的书写改成3.2rem*1.6rem。配合响应式修改html根的大小
+	- 字体不建议使用rem的，data-dpr属性动态设置字体大小。屏幕变大放更多的文字，或者屏幕更大放更多的字。
+	- 神奇的padding margin-top等比例缩放间距
+* 弹性盒子模型与reset的选择
+	- flex模型
+	- *的杀伤力太大！！！！
+	- reset.css重置 normalize.css修复 Neat.css融合了重置和修复
+	- html{box-sizing:border-box;}
+	- *,*:before,*:after{box-sizing:inherit;} //继承html
+* 自制的icon-font与常用字体排版
+	- no-image时代，不要超过纯色为2的图片（http://csscon.space/#/）
+	- 宋体非宋体，黑体非黑体 windows下的宋体叫中易宋体simsun，mac是华文宋体STSong。windows下的黑体叫中易黑体simhei，mac是华文黑体STHeiti
+	- 不要只写中文字体名，保证西文字体在中文字体前面。mac -> linux -> windows
+	- 切记不要直接使用设计师psd的设计font-family，关键时刻再去启动font-fase（typo.css entry.css type.css）
+	- font-family：sans-serif；系统默认
+* css代码检测与团队项目规范（css lint）
+* css绘制特殊图形 高级技巧
+	- border border-radius造就万千可能
+	- after、before任何一个html元素都可以创造3个可以供我们操作的视觉元素，即三个矩形
+	- box-shadow是可以定义为任何颜色的，并且同一个元素可以投影出不同的box-shabow
+	- 神奇borders构建的三角形
+	- 矩形的四条border，不一定永远是一个长条矩形的形状。它在正常情况下是一个梯形的形状，在我们改变这条边相邻的另外两条边的参数时，它的形状会相应得到改变。当我们在这条边的两个顶点加一些borber-radius圆角值的时候，这个形状还会有更奇异不可预知的形变。
+* BFC IFC GFC FFC
+	- BFC:(就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素)
         box:是css布局的对象和基本单位，直观点来说，就是一个页面是由很多个同类型的box，会参与不同的formatting context（一个决定如何渲染文档的容器），因此box内的元素会以不同的方式渲染。让我们看看有哪些盒子：
         block-level box:display属性为block，list-item，table的元素，会生成block-level box。并且参与block formatting context
         inline-level box:display属性为inline，inline-block，inline-table的元素，会生成inline-level box。并且参与inline formatting context
         formatting context是w3c css2.1 规范中的一个概念，它是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。最常见的formatting context有block formatting context（简称BFC）和inline formatting context（简称IFC）
         哪些元素会生成BFC：根元素（html）、float属性不为none、position为absolute或fixed、display为inline-block，table-cell，table-caption，flex，inline-flex、overflow不为visible(两个元素相互独立)
         例子：自适应两栏布局、清除内部浮动、防止垂直margin重叠
-      IFC:直译为“内联格式化上下文”，它的line box（线框）高度由其包括行内元素中最高的实际高度计算而来（不受到竖直方向的padding/margin影响）
-      GFC:（GirdLayout formatting context）直译为“网络布局格式化上下文”，当为一个元素设置display值为grid的时候，此元素将会获得一个独立的渲染区域，我们可以通过在网络容器上定义网络定义行（grid definition rows）和网络定义列（grid definition columns）属性各在网络项目（grid item）上定义网络行（grid row）和网络列（grid columns）为每个网络项目定义位置和空间。
-      FFC:（flex formatting context）直译为“自适应格式上下文”，display值为flex或者inline-flex的元素会自动自适应容器
-    (8)CSS Grid Layout
-    (9)CSS分层与面向对象
-      为什么分层
-      SMACSS:(scalable and modular architecture for css可扩展的模块化架构的css)像oocss一样以减少重复样式为基础，然而SMACSS使用一套五个层次来划分css给项目带来更结构化的方法
-        base:设定标签元素的预设值（html{} input[type=text]{}）
-        layout：整个网站的【大架构】的外观（#header{margin:30px}）
-        module:应用在不同页面公共模块（button{}）
-        state:定义元素不同的状态（nav--main{.active{}}）
-        theme:画面上所有【主视觉】的定义（border-color\background-image）
-        修饰符使用的是--，子模块使用_符号
-      BEM
-      SUIT
-      ACSS:原子（atoms）是创建一个区块的最基本的特质，比如说表单按钮。分子（molecules）是很多原子的组合，比如说一个表单中包括了一个标签，输入框和按钮。生物（organisms）是众多分子的组合物，比如一个网站的顶部区域，它包括了网站的标题，导航等。面板膜（template）又是众多生物的组合体，比如一个网站页面的布局，而最后的页面就是特殊的模版
-      .m-10{margin:10px} .w-50{width:50px;}
-      ITCSS
-    (10)面向对象的css
-  2.4【录播】CSS高级使用技巧【下】
-  2.5【录播】CSS与数学的巧妙运用
-  2.6【录播】ES5核心技术
-  2.7【录播】jQuery技术内幕
-  2.8【录播】走进后端工程师的世界
-  2.9【录播】常用后端语言介绍
-03 Linux基础入门
-  3.1 linux操作系统介绍
+	- IFC:直译为“内联格式化上下文”，它的line box（线框）高度由其包括行内元素中最高的实际高度计算而来（不受到竖直方向的padding/margin影响）
+	- GFC:（GirdLayout formatting context）直译为“网络布局格式化上下文”，当为一个元素设置display值为grid的时候，此元素将会获得一个独立的渲染区域，我们可以通过在网络容器上定义网络定义行（grid definition rows）和网络定义列（grid definition columns）属性各在网络项目（grid item）上定义网络行（grid row）和网络列（grid columns）为每个网络项目定义位置和空间。
+	- FFC:（flex formatting context）直译为“自适应格式上下文”，display值为flex或者inline-flex的元素会自动自适应容器
+* CSS Grid Layout
+* CSS分层与面向对象
+	- 为什么分层
+	- SMACSS:(scalable and modular architecture for css可扩展的模块化架构的css)像oocss一样以减少重复样式为基础，然而SMACSS使用一套五个层次来划分css给项目带来更结构化的方法
+		+ base:设定标签元素的预设值（html{} input[type=text]{}）
+		+ layout：整个网站的【大架构】的外观（#header{margin:30px}）
+		+ module:应用在不同页面公共模块（button{}）
+		+ state:定义元素不同的状态（nav--main{.active{}}）
+		+ theme:画面上所有【主视觉】的定义（border-color\background-image）
+		+ 修饰符使用的是--，子模块使用_符号
+	- BEM
+	- SUIT
+	- ACSS:原子（atoms）是创建一个区块的最基本的特质，比如说表单按钮。分子（molecules）是很多原子的组合，比如说一个表单中包括了一个标签，输入框和按钮。生物（organisms）是众多分子的组合物，比如一个网站的顶部区域，它包括了网站的标题，导航等。面板膜（template）又是众多生物的组合体，比如一个网站页面的布局，而最后的页面就是特殊的模版```.m-10{margin:10px} .w-50{width:50px;}```
+	- ITCSS
+* 面向对象的css
+
+### 2.4【录播】CSS高级使用技巧【下】
+### 2.5【录播】CSS与数学的巧妙运用
+### 2.6【录播】ES5核心技术
+### 2.7【录播】jQuery技术内幕
+### 2.8【录播】走进后端工程师的世界
+### 2.9【录播】常用后端语言介绍
+## 03 Linux基础入门
+### 3.1 linux操作系统介绍
     linux发行版本：ubuntu、redhat、centos、debain、fedora等
     虚拟机：是通过软件模拟的具有完整硬件系统功能的，运行在一个完全隔离环境中的完整计算机系统。流行的虚拟机软件有vmware（商业化）、virtualbox（开源）和virtual pc（微软 免费）
-  3.2 linux和虚拟机基本安装
-  3.3 linux基本命令入门
+### 3.2 linux和虚拟机基本安装
+### 3.3 linux基本命令入门
     当前短目录：ls dir
     长格式目录：ls -l（访问权限 数量 属于用户组 大小 创建时间 名称）
     显示隐藏文件：ls -a
@@ -128,37 +129,40 @@ test.xxx.com a.html
     显示用户全部目录：pwd
     删除文件命令：rm 文件名
     删除目录命令：rm -r 目录名称
-  3.4 windows命令行
-  3.5 cygwin安装和使用
-  3.6 web服务器基本原理和概念
-04 EcmaScript5.1新增语法【上】
-05 EcmaScript5.1新增语法【下】
-06 PHP与MySQL开发入门【上】
-  6.1 初识php
-  6.2 php基础操作
-  6.3 初识phpMyAdmin
-  6.4 PHP与MySQL
-  6.5 PHP与MySQL小实战
-  6.6 PHP PDO
-07 PHP与MySQL开发入门【中】
-  7.1 PHP面向对象的介绍
-  7.2 构造方法与析构方法
-  7.3 PHP面向对象之封装性
-  7.4 PHP面向对象之继承和多态
-    （1）类继承的应用
-      php只支持单继承，不允许多重继承。一个子类只能有一个父类，不允许一个类直接继承多个类，但一个类可以被多个类继承。
-      可以有多层继承，即一个类可以继承某一个类的子类，如类b继承了类a，类c又继承了类b，那么类c也间接继承了类a
-    （2）访问类型控制
-                    private       protected        public(默认的)
-      在同一类中      可以           可以              可以
-      在子类中        不可以         可以              可以
-      在类的外部      不可以         不可以             可以
-    （3）子类中重载父类的方法
-      在子类里面允许重写（覆盖）父类中的方法
-      在子类中，使用parent访问父类中被覆盖的属性和方法
-      parent::construct();
-      parent::fun();
-  7.5 PHP抽象类与接口
+### 3.4 windows命令行
+### 3.5 cygwin安装和使用
+### 3.6 web服务器基本原理和概念
+## 04 EcmaScript5.1新增语法【上】
+## 05 EcmaScript5.1新增语法【下】
+## 06 PHP与MySQL开发入门【上】
+###6.1 初识php
+###6.2 php基础操作
+###6.3 初识phpMyAdmin
+###6.4 PHP与MySQL
+###6.5 PHP与MySQL小实战
+###6.6 PHP PDO
+## 07 PHP与MySQL开发入门【中】
+### 7.1 PHP面向对象的介绍
+### 7.2 构造方法与析构方法
+### 7.3 PHP面向对象之封装性
+### 7.4 PHP面向对象之继承和多态
+* 类继承的应用
+	- php只支持单继承，不允许多重继承。一个子类只能有一个父类，不允许一个类直接继承多个类，但一个类可以被多个类继承。
+	- 可以有多层继承，即一个类可以继承某一个类的子类，如类b继承了类a，类c又继承了类b，那么类c也间接继承了类a
+* 访问类型控制
+
+	类型      | private | protected | public(默认的) |
+	----------|--------|------------|---------------|
+	在同一类中 | 可以    | 可以        | 可以           |
+	在子类中   | 不可以  | 可以        | 可以    |
+	在类的外部 | 不可以  | 不可以       | 可以   |
+* 子类中重载父类的方法
+	- 在子类里面允许重写（覆盖）父类中的方法
+	- 在子类中，使用parent访问父类中被覆盖的属性和方法
+	- parent::construct();
+	- parent::fun();
+
+### 7.5 PHP抽象类与接口
     (1)抽象方法和抽象类
       当类中有一个方法，他没有方法体，也就是没有花括号，直接分号结束，像这种方法我们叫抽象方法，必须使用关键字abstract定义。如public abstract function fun();
       包含这种方法的类必须是抽象类，也要使用关键字abstract加以声明。（即使用关键字abstract修饰的类为抽象类）
@@ -180,7 +184,7 @@ test.xxx.com a.html
       接口中不能含有静态代码块以及静态方法，而抽象类可以含有静态方法和静态代码块。
     (4)多态应用
       对象的多态性：是指在父类中定义的属性或行为被子类继承之后，可以具有不同的数据类型或表现出不同的行为。这使得同一个属性或行为在父类及其各个子类中具有不同的语义。
-  7.6 PHP常见的关键字
+### 7.6 PHP常见的关键字
     (1)final关键字
       在php5中新增加了final关键字，它只能用来修饰类和方法。不能使用final这个关键字来修饰成员属性。
       final的特性：
@@ -216,33 +220,33 @@ test.xxx.com a.html
       get_class（返回对象类名）与get_object_vars（返回由对象属性组成的关联数组）函数
       get_parent_class（返回对象或类的父类名）与is_a（如果对象属于该类或该类是此对象的父类则返回true）函数
       method_exists（检查类的方法是否存在）与property_exists（检查对象或类是否具有该属性）函数
-  7.7 PHP错误处理类
+### 7.7 PHP错误处理类
     （1）系统自带的异常处理
     （2）自定义异常处理
     （3）捕捉多个异常处理
-  7.8 PHP和JavaScript的比较
+### 7.8 PHP和JavaScript的比较
   （www.cnblogs.com/xiaochaohuashengmi/archive）
     （1）
     （2）
     （3）
-08 PHP与MySQL开发入门【下】
-  8.1 MySQL数据库客户端基础
+## 08 PHP与MySQL开发入门【下】
+### 8.1 MySQL数据库客户端基础
     （1）www.mysql.com -> downlods -> mysql community -> mysql workbench
-  8.2 MySQL创建表
-    create table 数据库名.表名(
+### 8.2 MySQL创建表
+    ```create table 数据库名.表名(
       `id` int not null auto_increment comment '',
       primary key(`id`) comment ''
-    );
-  8.3 MySQL函数SQL语句
+    );```
+### 8.3 MySQL函数SQL语句
     count(*):查询的数据有几条
     min(birthdate):求最小值
     表名.*: 返回表中的其他数据
     max():求最大值
     sum():求和
-  8.4 MYSQL条件查询
+### 8.4 MYSQL条件查询
     where 列名 between ‘’ and ‘’ ： 中间
     where 列名 like ‘%王%’：%表示通配符，表示字符串中含有王这个字（模糊查询）数据库效率比较低
-  8.5 MYSQL复杂条件查询
+### 8.5 MYSQL复杂条件查询
     排序：order by 列名 desc(倒序)/asc(正序，默认)
     多个数据表操作时，必须有关联的字段：
     select * from 表名1，表名2 where 表名1.classid = 表名2.id
@@ -250,12 +254,12 @@ test.xxx.com a.html
     leftjoin：
     select * from 表名1 left join 表名2 on 表名1.classid = 表名2.id
     mysql用join on比较多
-09 EcmaScript6
-  9.1 ES6简介与环境搭建
+## 09 EcmaScript6
+### 9.1 ES6简介与环境搭建
     kangax.github.io/compat-table/es6   查看js支持情况
     解码器：traceur 、babel
     shim和polyfill 、css polyfill
-  9.2 ES6编程风格【上】
+### 9.2 ES6编程风格【上】
     （1）const、let
       const：常量（不能被赋值=，但可以加东西push），建议使用
       优点：可以提醒大家 不能被改变
@@ -301,7 +305,7 @@ test.xxx.com a.html
       test(30,{options:111}) //111
       // 变形为
       function test(...result){console.log(result)} //[30,{options:111}]
-  9.3 ES6编程风格【中】
+### 9.3 ES6编程风格【中】
     (1)iterator 遍历器(解决异步变成同步) 现在用的不多
       function* a(){yield "";} a.next()
     (2)generator
@@ -347,10 +351,10 @@ test.xxx.com a.html
       import {a,b} from "j" 或者import * as data from "j" 
       export default 函数名
       import j from "j"
-  9.4 ES6编程风格【下】
+### 9.4 ES6编程风格【下】
     async await： 
-10 专题一.JavaScript语言新发展【深度实践课】
-  10.1 JavaScript与QA工程师
+##10 专题一.JavaScript语言新发展【深度实践课】
+###10.1 JavaScript与QA工程师
     （1）单元测试
       目的：单元测试能够让开发者明确知道代码结果
       原则：单一职责、接口抽象、层次分离
@@ -392,7 +396,7 @@ test.xxx.com a.html
       jslink：http://www.jslink.com/
       jshint：http://www.jshint.com/
       搭配自动化任务管理工具完善自动化测试grunt-jshint\grunt-jslink
-  10.2 JavaScript语言精粹1
+### 10.2 JavaScript语言精粹1
     (1)数据类型：
       值类型：boolean number string null undefined(声明但为赋值) symbol  存储：直接内存（栈内存）
       对象：object（array、regexp、date、math） 地址放到栈内存，实际上的内容放到堆内存中
@@ -501,7 +505,7 @@ test.xxx.com a.html
       console.log(arr); //[1,2]
     (15)我们写的程序是需要设计的，设计的时候是需要抽象和封装的，抽象变化 ，封装共性
     (16)好的操作dom是：数据驱动ui，用事件接受action，所有的变化都是可控的
-  10.3 JavaScript语言精髓2
+### 10.3 JavaScript语言精髓2
     （1）作用域
       一个作用域内，某一个变量没有用var申明的话，那它声明的是全局作用域下的变量
       作用域由大到小：
@@ -584,5 +588,5 @@ test.xxx.com a.html
       如果直接调用fn():则this指向window，如果是obj.fn()：则this指向.之前的对象也就是obj
       如果this.date = undefeated 那么this.date.name 就会报错
       
-  10.4 ES6在企业中的应用
-  10.5 TypeScript前世今生
+###10.4 ES6在企业中的应用
+###10.5 TypeScript前世今生
