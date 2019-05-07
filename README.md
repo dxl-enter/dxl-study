@@ -359,8 +359,8 @@ test2.xxx.com b.html
 ### 9.4 ES6编程风格【下】
     async await： 
 
-##10 专题一.JavaScript语言新发展【深度实践课】
-###10.1 JavaScript与QA工程师
+## 10 专题一.JavaScript语言新发展【深度实践课】
+### 10.1 JavaScript与QA工程师
     （1）单元测试
       目的：单元测试能够让开发者明确知道代码结果
       原则：单一职责、接口抽象、层次分离
@@ -594,5 +594,5 @@ test2.xxx.com b.html
       如果直接调用fn():则this指向window，如果是obj.fn()：则this指向.之前的对象也就是obj
       如果this.date = undefeated 那么this.date.name 就会报错
       
-###10.4 ES6在企业中的应用
-###10.5 TypeScript前世今生
+### 10.4 ES6在企业中的应用
+### 10.5 TypeScript前世今生
