@@ -114,6 +114,7 @@ test2.xxx.com b.html
 ### 2.7【录播】jQuery技术内幕
 ### 2.8【录播】走进后端工程师的世界
 ### 2.9【录播】常用后端语言介绍
+
 ## 03 Linux基础入门
 ### 3.1 linux操作系统介绍
     linux发行版本：ubuntu、redhat、centos、debain、fedora等
@@ -132,6 +133,7 @@ test2.xxx.com b.html
 ### 3.4 windows命令行
 ### 3.5 cygwin安装和使用
 ### 3.6 web服务器基本原理和概念
+
 ## 04 EcmaScript5.1新增语法【上】
 ## 05 EcmaScript5.1新增语法【下】
 ## 06 PHP与MySQL开发入门【上】
@@ -141,6 +143,7 @@ test2.xxx.com b.html
 ###6.4 PHP与MySQL
 ###6.5 PHP与MySQL小实战
 ###6.6 PHP PDO
+
 ## 07 PHP与MySQL开发入门【中】
 ### 7.1 PHP面向对象的介绍
 ### 7.2 构造方法与析构方法
@@ -229,6 +232,7 @@ test2.xxx.com b.html
     （1）
     （2）
     （3）
+
 ## 08 PHP与MySQL开发入门【下】
 ### 8.1 MySQL数据库客户端基础
     （1）www.mysql.com -> downlods -> mysql community -> mysql workbench
@@ -254,6 +258,7 @@ test2.xxx.com b.html
     leftjoin：
     select * from 表名1 left join 表名2 on 表名1.classid = 表名2.id
     mysql用join on比较多
+
 ## 09 EcmaScript6
 ### 9.1 ES6简介与环境搭建
     kangax.github.io/compat-table/es6   查看js支持情况
@@ -353,6 +358,7 @@ test2.xxx.com b.html
       import j from "j"
 ### 9.4 ES6编程风格【下】
     async await： 
+
 ##10 专题一.JavaScript语言新发展【深度实践课】
 ###10.1 JavaScript与QA工程师
     （1）单元测试
