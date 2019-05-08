@@ -50,7 +50,7 @@ test2.xxx.com b.html
 * 集合touth事件
 * javascript 库：parallax：通过视觉差构建
 
-###2.3【录播】CSS高级实用技巧【上】
+### 2.3【录播】CSS高级实用技巧【上】
 * 早期的双飞翼布局+css hack
 	- position float 负边距 等高(padding-bottom:9999px;margin-bottom:-9999px;在container{overflow:hidden}) 盒子模型(margin不会影响盒子模型) 清除浮动【《css那些事儿》】
 	- 垂直居中：
