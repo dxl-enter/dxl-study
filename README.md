@@ -137,12 +137,12 @@ test2.xxx.com b.html
 ## 04 EcmaScript5.1新增语法【上】
 ## 05 EcmaScript5.1新增语法【下】
 ## 06 PHP与MySQL开发入门【上】
-###6.1 初识php
-###6.2 php基础操作
-###6.3 初识phpMyAdmin
-###6.4 PHP与MySQL
-###6.5 PHP与MySQL小实战
-###6.6 PHP PDO
+### 6.1 初识php
+### 6.2 php基础操作
+### 6.3 初识phpMyAdmin
+### 6.4 PHP与MySQL
+### 6.5 PHP与MySQL小实战
+### 6.6 PHP PDO
 
 ## 07 PHP与MySQL开发入门【中】
 ### 7.1 PHP面向对象的介绍
