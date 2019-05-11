@@ -1,4 +1,4 @@
-## 1 PHP与MySQL开发入门【下】
+## 1 MySQL开发入门
 ### 1.1 MySQL数据库客户端基础
     （1）www.mysql.com -> downlods -> mysql community -> mysql workbench
 ### 1.2 MySQL创建表
