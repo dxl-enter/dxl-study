@@ -1,11 +1,11 @@
 # 版本控制系统
-### 1.[**git**](https://github.com/dxl-enter/dxl-study/blob/master/operating-system/LINUX/README)
+### 1.[**git**](https://github.com/dxl-enter/dxl-study/blob/master/basis/tools/version-control-tools/git/README.md)
 * 概念：Git是目前世界上最先进的分布式版本控制系统（没有之一）
 * 集中式和分布式版本控制系统有什么区别呢？
 	- 集中式版本控制系统最大的毛病就是必须联网才能工作，如果在局域网内还好，带宽够大，速度够快，可如果在互联网上，遇到网速慢的话，可能提交一个10M的文件就需要5分钟
 	- 分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。
 
-### 2. [**SVN**](https://github.com/dxl-enter/dxl-study/blob/master/operating-system/LINUX/README)
+### 2. [**SVN**](https://github.com/dxl-enter/dxl-study/blob/master/basis/tools/version-control-tools/svn/README.md)
 * 概念：
 	- 是一个开源的版本控制系統, 也就是说 Subversion 管理着随时间改变的数据。 这些数据放置在一个中央资料档案库(repository) 中。 这个档案库很像一个普通的文件服务器, 不过它会记住每一次文件的变动。 这样你就可以把档案恢复到旧的版本, 或是浏览文件的变动历史。
 * 主要功能：
