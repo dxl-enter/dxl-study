@@ -1,10 +1,65 @@
 ## 06 PHP与MySQL开发入门【上】
 ### 6.1 初识php
+	js不是面向对象的语言，而是面向过程的语言
+* 初识php
+	- php（外文名：hypertext preprocessor 超文本预处理器）[html是超文本标记语言，php和html的关系是可以让你预先处理]是一种通用的开源脚本语言（不需要编译）。语法吸取了c语言、java和perl的特点的，利于学习，使用广泛，主要适用于web开发领域。php独特的语法混合了c、java、perl以及php自创的语法。它可以比cgi或者perl更快速地执行动态网页。用php作出的动态页面与其他的编程语言相比，php是将程序嵌入到html（标准通用标记语言下的一个应用）文档中去执行，执行效率比完全生成html标记的cgi要高许多；php还可以执行编译后代码，编译可以达到加密和优化代码运行，使代码运行更快。
+	- isset():用来判断变量是否声明
+	- if(){}:是块级作用域
+	- 定义的全局变量，函数中需要再用global关键字使用这个变量，才能访问到
+	- $arrayTest = array('0'=>"apple",'1'=>"orange")
+		echo $arrayTest[0]
+	- session:会话处理机制
+		// 每个页面都必须驱动
+		session_start();
+		$_SESSION['views'] = 1;
+		echo $_SESSION['views'];
+	- 
+* OO的概念解读以及prototype
+* php和js的比较
+* 区别前端语言还是后端语言的本质
+	- 前端语言直接展现给用户
+	- 后端语言跑到一台机器上的，做服务的
+
 ### 6.2 php基础操作
+* 见源码
+
 ### 6.3 初识phpMyAdmin
+* LAMP：linux+apache+mysql+php
+* 文本化界面
+* 新建数据库、新建表、增、删、改、查
+
 ### 6.4 PHP与MySQL
+* php；连接数据库(注意php7和php5之间的差别)
+* 解决存入数据库的数据为乱码：
+	mysql_query("set names 'utf8'")
+* PHP 面向对象
+
+	```
+		// 创建连接
+		$conn = new mysqli($servername, $username, $password);
+		// 关闭连接
+		$conn->close();
+	```
+* PHP 面向过程
+
+	```
+		// 创建连接
+		$conn = mysqli_connect($servername, $username, $password);
+		// 关闭连接
+		mysqli_close($conn);
+	```
+* PHP PDO
+
+	```
+		// 创建连接
+		$conn = new PDO("mysql:host=$servername;", $username, $password);
+		// 关闭连接
+		$conn = null;
+	```
 ### 6.5 PHP与MySQL小实战
+见代码/Users/duanli/.bitnami/stackman/machines/xampp/volumes/root/htdocs/yideng-phptest
 ### 6.6 PHP PDO
+* 注意在以上 PDO 实例中我们已经指定了数据库 (myDB)。PDO 在连接过程需要设置数据库名。如果没有指定，则会抛出异常。
 
 ## 07 PHP与MySQL开发入门【中】
 ### 7.1 PHP面向对象的介绍
