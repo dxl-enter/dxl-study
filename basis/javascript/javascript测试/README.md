@@ -80,8 +80,8 @@
 
 ### 2. 关于this
 ```
-	this.a = 20; 
-	var test = {
+this.a = 20; 
+var test = {
     a: 40,
     init:()=> {
         console.log(this.a);  
@@ -92,7 +92,8 @@
         return go;
         }
     };
-    new(test.init())();   //20   50 
+}
+new(test.init())();   //20   50 
 	
 ```
 - 解释：箭头函数的this绑定父级的词法作用域，所以他的`this.a`固定了是20。go本身没有a 这个属性，所以new出来的对象也没有这个属性，会到原型链上面去找。所以是50。
