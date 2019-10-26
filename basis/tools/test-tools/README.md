@@ -1,5 +1,6 @@
 # JavaScript于QA测试工程师
 ### 单元测试
+* 现在的npm和cnpm和yarn比较类似，最早的npm是有诟病的，如果在本地装了一个包，包的版本发生了变化，会造成原来的文件死了，为了解决这个问题，它在本地加了一个锁（package-lock.json）
 * 为什么？
 	现在ci和cd需要这个做铺垫 devops自动化运维 nodevops不要运维 
 	保证代码质量都靠自动化测试（测试qa 前端fe 后端rd 运维op 数据库db 项目主管pm）
