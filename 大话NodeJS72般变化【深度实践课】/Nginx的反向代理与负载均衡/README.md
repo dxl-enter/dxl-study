@@ -59,3 +59,23 @@
 
 ![服务器集群文件](https://github.com/dxl-enter/dxl-study/blob/master/%E5%A4%A7%E8%AF%9DNodeJS72%E8%88%AC%E5%8F%98%E5%8C%96%E3%80%90%E6%B7%B1%E5%BA%A6%E5%AE%9E%E8%B7%B5%E8%AF%BE%E3%80%91/Nginx%E7%9A%84%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/Dingtalk_20201229150121.jpg)
 
+6. 经典代码
+
+```
+// 动态匹配职责链
+router.get(/^\/(\d+)_(\d+)/,cModel.A,cModel.B,cModel.C);
+
+// 加密模块
+var shaObj = new jsSHA(string, 'TEXT');
+var hash = shaObj.getHash('SHA-1', 'HEX');
+
+// 做一些特殊的请求报头
+var forPound = req.headers['x-forwarded-for-pound'];
+
+// 在抛出异常的地方做处理
+callback(new Error('Fail to parse http response to json,url:'+reqOptions.url),res,body);
+
+// 在路由没有加载进来之前把middleware加载进来
+require('./middleware')(app);
+```
+
