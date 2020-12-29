@@ -51,4 +51,5 @@
 * PM2启动应用程序小流量灰度上线，修复Bug：bug不会都修复完就要上线
 * 上线前的不眠夜
 5. 服务器集群
-![avatar](大话NodeJS72般变化【深度实践课】/Nginx的反向代理与负载均衡/Dingtalk_20201229150121.jpg)
+![服务器集群文件]((https://github.com/dxl-enter/dxl-study/blob/master/%E5%A4%A7%E8%AF%9DNodeJS72%E8%88%AC%E5%8F%98%E5%8C%96%E3%80%90%E6%B7%B1%E5%BA%A6%E5%AE%9E%E8%B7%B5%E8%AF%BE%E3%80%91/Nginx%E7%9A%84%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/Dingtalk_20201229150007.jpg)
+![服务器集群文件]((https://github.com/dxl-enter/dxl-study/blob/master/%E5%A4%A7%E8%AF%9DNodeJS72%E8%88%AC%E5%8F%98%E5%8C%96%E3%80%90%E6%B7%B1%E5%BA%A6%E5%AE%9E%E8%B7%B5%E8%AF%BE%E3%80%91/Nginx%E7%9A%84%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/Dingtalk_20201229150121.jpg)
