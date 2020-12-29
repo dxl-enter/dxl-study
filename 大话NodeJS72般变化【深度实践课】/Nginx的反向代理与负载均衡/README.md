@@ -51,4 +51,4 @@
 * PM2启动应用程序小流量灰度上线，修复Bug：bug不会都修复完就要上线
 * 上线前的不眠夜
 5. 服务器集群
-![avatar](http://baidu.com/pic/doge.png)
+![avatar](大话NodeJS72般变化【深度实践课】/Nginx的反向代理与负载均衡/Dingtalk_20201229150121.jpg)
