@@ -10,6 +10,9 @@
 * ip_hash指令：如何让同一个用户落在同一台服务器上
 * server指令：
 4. 其他负载均衡的方法
+
+![服务器集群文件](https://github.com/dxl-enter/dxl-study/blob/master/%E5%A4%A7%E8%AF%9DNodeJS72%E8%88%AC%E5%8F%98%E5%8C%96%E3%80%90%E6%B7%B1%E5%BA%A6%E5%AE%9E%E8%B7%B5%E8%AF%BE%E3%80%91/Nginx%E7%9A%84%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/Dingtalk_20201229141545.jpg?raw=true)
+
 ### 部署nodejs上线步骤
 1. 打开https://brew.sh/index_zh-cn.html
 2. brew search nginx  brew install nginx
