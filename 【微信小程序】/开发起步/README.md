@@ -48,4 +48,5 @@ app.json: 全局页面样式
 project.config.json: 微信开发者工具配置
 pages：页面
 sitemap.json: 当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。 
+wxss：750rpx为100%的屏幕宽度；仅支持部分的选择器（.class、#id、element、element,element、::after、::before）
 ```
