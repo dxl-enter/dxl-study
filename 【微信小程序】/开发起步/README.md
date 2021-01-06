@@ -17,17 +17,21 @@
 * 开发方式不一样
 * 获取权限不一样
 4. 小程序与native app、webapp以及hybrid app的区别
-![图片](http://static.runoob.com/images/runoob-logo.png)
+
+![图片](https://github.com/dxl-enter/dxl-study/blob/master/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/%E5%BC%80%E5%8F%91%E8%B5%B7%E6%AD%A5/Dingtalk_20210106105519.jpg?raw=true)
+
 5. 小程序与普通网页开发的区别
 * 开发语言
 * 多线程：网页开发渲染线程和脚本线程是互斥的，这也导致长期脚本运行导致页面渲染卡顿；在小程序中渲染线程和脚本线程是分开的线程。
 * DOM、Bom操作：网页开发是可以操作的；小程序的逻辑层和渲染层是分开的，没有DOM api和Bom api，像前端一些jquery和zpto是不能运行的
 * 运行环境：小程序的开发环境
-![图片](http://static.runoob.com/images/runoob-logo.png)Dingtalk_20210106103611.jpg
+
+![图片](https://github.com/dxl-enter/dxl-study/blob/master/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/%E5%BC%80%E5%8F%91%E8%B5%B7%E6%AD%A5/Dingtalk_20210106103611.jpg?raw=true)
+
 * 开发
 ### 开发入门
 1. 账号注册
-![图片](http://static.runoob.com/images/runoob-logo.png)Dingtalk_20210106110155.jpg
+![图片](https://github.com/dxl-enter/dxl-study/blob/master/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/%E5%BC%80%E5%8F%91%E8%B5%B7%E6%AD%A5/Dingtalk_20210106110155.jpg?raw=true)
 2. 申请域名和证书
 * 开发环境中
 
