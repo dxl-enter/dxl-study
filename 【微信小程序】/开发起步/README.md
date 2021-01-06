@@ -31,7 +31,9 @@
 * 开发
 ### 开发入门
 1. 账号注册
+
 ![图片](https://github.com/dxl-enter/dxl-study/blob/master/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/%E5%BC%80%E5%8F%91%E8%B5%B7%E6%AD%A5/Dingtalk_20210106110155.jpg?raw=true)
+
 2. 申请域名和证书
 * 开发环境中
 
