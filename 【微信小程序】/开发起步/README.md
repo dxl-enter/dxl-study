@@ -56,3 +56,13 @@ pages：页面
 sitemap.json: 当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。 
 wxss：750rpx为100%的屏幕宽度；仅支持部分的选择器（.class、#id、element、element,element、::after、::before）；class和hover-class的文件是需要有先后顺序的。
 ```
+
+4. 数据更新与事件机制
+* 在小程序中并没有提供类似操作DOM的api来直接更新视图，所以我们需要使用setData（不仅会对本页面的data对象进行改变，还可以动态向data对象添加变量）方式来更新数据，让框架自动更新视图。如果使用this.data.currentIndex = 1;赋值的话，业务逻辑层数据会更新，但是视图层不会更新。
+* 小程序中的数据并不是双向绑定的，而是单向绑定：视图层的数据改变不会影响逻辑层的数据改变
+* 事件机制：冒泡事件（bind）、非冒泡事件（catch）
+* 视图层到逻辑层的数据传递方式event事件对象，target是触发的目标元素；而surrentTarget是冒泡事件回触发父级的点击事件，里面的dataset会获取到页面设置的自定义元素(wxml - data-movie-id="{{movie.id}}" ---> js - event.surrentTarget.dataset.movieId)；changeTouches会获取到手指触摸屏幕的坐标
+
+5. 实现电影推荐页路由带参跳转
+* 
+
