@@ -17,9 +17,16 @@
  * 微服务继承和部署
   + 持续集成 - jenkins
   + 虚拟化 - 虚拟机
-  + 容器 - docker
+  + 容器 - docker，提供基本的运行环境
 2. Docker vs vm
 3. docker的相关概念
+  * apache 是web容器
+  * tomcat是java容器
+  * 通常用于如下场景：
+    + web应用的自动化打包和发布
+    + 自动化测试和持续集成、发布
+    + 在服务器环境中部署和调整数据库或其他后台应用
+    + 从头编译或者扩展现有的openShift或cloud Foundry平台来搭建自己的PaaP环境
 4. 安装与hello world
 5. 常用命令与docker
 6. docker hub
