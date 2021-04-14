@@ -35,6 +35,9 @@
     + 自动化测试和持续集成、发布：打包的程序放在服务器中，另一边的无头浏览器开始跑
     + 在服务器环境中部署和调整数据库或其他后台应用：把服务包装起来：微信小程序（无服务器）
     + 从头编译或者扩展现有的openShift或cloud Foundry平台来搭建自己的PaaP环境
+  * docker是cs架构，主要有两个概念：
+    + docker daemon：运行在宿主机上；docker守护进程；用户通过docker client（docker命令）与docker daemon交互
+    + docker client：docker命令行，是用户使用docker的主要方式；docker client与docker daemon通信将结果返回给用户；docker client页可以通过socket或者restful api访问远程的docker daemon
 4. 安装与hello world
 5. 常用命令与docker
 6. docker hub
