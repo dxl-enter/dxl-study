@@ -44,6 +44,15 @@
     + 构建镜像
     + 镜像标签
     + 修改容器内容
+
+```
+FROM centos
+MAINTAINER Dxler <823221088@qq.com>
+
+RUN yum install gcc automake autoconf libtool make -y
+RUN yum install zlib zlib-devel libffi-devel -y
+```
+
 4. 安装与hello world
 5. 常用命令与docker
 6. docker hub
