@@ -38,6 +38,12 @@
   * docker是cs架构，主要有两个概念：
     + docker daemon：运行在宿主机上；docker守护进程；用户通过docker client（docker命令）与docker daemon交互
     + docker client：docker命令行，是用户使用docker的主要方式；docker client与docker daemon通信将结果返回给用户；docker client页可以通过socket或者restful api访问远程的docker daemon
+  * Dockerfile
+    + Dockerfile概念
+    + Dockerfile文件格式
+    + 构建镜像
+    + 镜像标签
+    + 修改容器内容
 4. 安装与hello world
 5. 常用命令与docker
 6. docker hub
