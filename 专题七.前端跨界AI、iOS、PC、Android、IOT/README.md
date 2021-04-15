@@ -103,22 +103,23 @@ CMD python3 -m http.server
   * 安装
     + 在linux下安装单机版的集群环境
     + 以root身份执行以下操作
-      1. 关闭linux防火墙
+      1. 关闭linux防火墙(SELinux【软件防火墙】和firewalld)
         + systemctl stop firewalld
         + systemctl disable firewalld
       2. 安装Kubernetes和依赖组件etcd
-        + yum install -y etcd Kubernetes
+        + yum install -y etcd kubernetes
       3. 修改配置
         + docker配置文件/etc/sysconfig/docker,option='__selinux-enabled=false --insecure-registry gcr.io'
         + Kubernetes apiserver配置文件/etc/Kubernetes/apiserver，把--admission-control参数中的serviceAccount删除
-      4. 按顺序启动所有的服务
-        + systemctl start etcd
-        + systemctl start docker
-        + systemctl start kube-apiserver
+      4. 按顺序启动所有的服务（docker除外）
+        + systemctl start etcd（注册表）
+        + systemctl start kube-apiserver（依赖etcd）
         + systemctl start kube-controller-manager
-        + systemctl start kube-scheduler
-        + systemctl start kubelet
+        + systemctl start kube-scheduler（以上都属于服务端）
+        + systemctl start docker（以下属于客户端）
+        + systemctl start kubelet（管理容器集，依赖docker）
         + systemctl start kube-proxy
-  * 配置文件结构
-  * 常用配置方法
-8. 搭建一个nodejs集群
+8. 地址
+  * http://hub.docker.com
+  * http://kubernetes,io/zh/    (google的)
+9. 搭建一个nodejs集群
