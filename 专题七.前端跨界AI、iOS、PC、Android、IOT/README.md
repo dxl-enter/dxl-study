@@ -92,15 +92,33 @@ CMD python3 -m http.server
   * 应用层
   * 核心层
 5. 相关怪年
-  * 主机（master）：用于控制Kubernetes节点的计算机。所有任务分配都来自于此
-  * 节点（node）：执行请求和分配任务的计算机。由Kubernetes主机负责对节点进行控制
+  * 主机（master）：用于控制Kubernetes节点的计算机。所有任务分配都来自于此。（负责管理的）
+  * 节点（node）：执行请求和分配任务的计算机。由Kubernetes主机负责对节点进行控制。（负责干活的）
   * 容器集（pod）：部署在单个节点上的，且包含一个或多个容器的容器组。同一容器集中的所有容器共享一个ip地址、ipc、主机名称及其他资源。容器集会将网络和存储从底层容器中抽象出来。这样，您就能更加轻松地在集群中移动容器
   * 复制控制器（replication controller）：用于控制应在集群某处运行的完全相同的容器集副本数量。
-  * 服务（service）：服务可将工作定义与容器集分离。Kubernetes服务代理会自动将服务请求分配到正确的容器集---无论这个容器集会移动到集群中的那个位置，即使它已被替换
+  * 服务（service）：服务可将工作定义与容器集分离。Kubernetes服务代理会自动将服务请求分配到正确的容器集---无论这个容器集会移动到集群中的那个位置，即使它已被替换（软件设计规律：抽象度越高工作度越高）
   * kubelet：这是一个在节点上运行的服务，可读取容器清单，确保指定的容器启动并运行
   * kubectl：Kubernetes的命令行配置工具
 7. k8s的安装与配置
   * 安装
+    + 在linux下安装单机版的集群环境
+    + 以root身份执行以下操作
+      1. 关闭linux防火墙
+        + systemctl stop firewalld
+        + systemctl disable firewalld
+      2. 安装Kubernetes和依赖组件etcd
+        + yum install -y etcd Kubernetes
+      3. 修改配置
+        + docker配置文件/etc/sysconfig/docker,option='__selinux-enabled=false --insecure-registry gcr.io'
+        + Kubernetes apiserver配置文件/etc/Kubernetes/apiserver，把--admission-control参数中的serviceAccount删除
+      4. 按顺序启动所有的服务
+        + systemctl start etcd
+        + systemctl start docker
+        + systemctl start kube-apiserver
+        + systemctl start kube-controller-manager
+        + systemctl start kube-scheduler
+        + systemctl start kubelet
+        + systemctl start kube-proxy
   * 配置文件结构
   * 常用配置方法
 8. 搭建一个nodejs集群
