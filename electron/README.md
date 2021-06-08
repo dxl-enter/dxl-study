@@ -81,7 +81,8 @@ const mainWindow = new BrowserWindow({
   width: 800,
   height: 600,
   webPreference:{
-    nodeIntegration:true   // 开启渲染进程中使用的nodejs
+    nodeIntegration:true,   // 开启渲染进程中使用的nodejs
+    enableRemoteModule:true // electron10.x以后要使用remote模块的话必须得在browserWindow中开启此项
   }
 });
 ```
