@@ -3,7 +3,8 @@
 1. 安装electron
 
 ```
-npm install -g electron   /    cnpm install -g electron
+npm install -g electron
+cnpm install -g electron
 ```
 
 2. 克隆一个仓库、快速启动一个项目
