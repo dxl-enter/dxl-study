@@ -81,7 +81,7 @@ const mainWindow = new BrowserWindow({
   width: 800,
   height: 600,
   webPreference:{
-    nodeIntegration:true
+    nodeIntegration:true   // 开启渲染进程中使用的nodejs
   }
 });
 ```
