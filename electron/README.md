@@ -72,3 +72,17 @@ app.on('window-all-closed', () => {
 ## electron主进程和渲染进程
 1. package.json中定义的入口被称为主进程。在主进程中实例化browserWindow创建的web页面被称为渲染进程。一个electron应用只有一个主进程。但是可以又多个渲染进程，每个electron中的web页面运行在它自己的渲染进程中。
 2. 主进程使用browserWindow示例创建页面。每个browserWindow实例都在自己的渲染进程里运行页面。当一个browserWindow实例被销毁后，相应的渲染进程也会被终止。
+
+## electron主进程和渲染进程中使用nodejs以及nodejs第三方模块
+electron5.x之前默认可以在主进程以及渲染进程中直接使用nodejs，但是在electron5.x之后默认没法在渲染进程中直接使用nodejs，如果我们想在渲染进程中使用nodejs的话需要进行如下配置
+
+```
+const mainWindow = new BrowserWindow({
+  width: 800,
+  height: 600,
+  webPreference:{
+    nodeIntegration:true
+  }
+});
+```
+渲染进程的报的错在浏览器console中，而主进程的报错在编辑器控制台
