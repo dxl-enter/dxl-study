@@ -1,6 +1,12 @@
 # electron
 ## 创建项目
-1. 克隆一个仓库、快速启动一个项目
+1. 安装electron
+
+```
+npm install -g electron   /    cnpm install -g electron
+```
+
+2. 克隆一个仓库、快速启动一个项目
 
 ```
 克隆示例项目的仓库
@@ -11,7 +17,7 @@ cd electron-quick-start
 npm install && npm start
 ```
 
-2. electron-forge 搭建一个electron项目
+3. electron-forge 搭建一个electron项目
 electron-forge相当于electron的一个脚手架，可以让我们更方便的创建、运行、打包electron项目。
 github地址：https://github.com/electron-userland/electron-forge
 官网地址：https://www.electronforge.io
@@ -34,7 +40,7 @@ cd my-new-app
 npm start
 ```
 
-3. 手动创建一个electron项目
+4. 手动创建一个electron项目
 
 ```
 1、新建一个项目目录，例如：electrondemo01
