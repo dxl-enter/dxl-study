@@ -48,7 +48,23 @@ npm start
 2、在electrondemo01目录下新建三个文件：index.html、main.js、package.json
 3、index.html里面用css进行布局
 4、在main.js中写以下代码
-var electron = require('electron');
-// electron对象的引用
-const app = electron.app;
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
+
+const createWindow = () => {
+  const mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+  });
+
+  // and load the index.html of the app.
+  mainWindow.loadFile(path.join(__dirname, 'index.html'));
+};
+app.on('ready', createWindow);
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
+});
+
 ```
