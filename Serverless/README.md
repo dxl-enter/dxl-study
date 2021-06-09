@@ -26,7 +26,24 @@
 4、腾讯云和Serverless合作在腾讯云中集成了Serverless Framework 让我们可以用我们喜欢的框架开发Serverless应用。也可以让我们快速部署老项目。
 5、价格更便宜
 ```
-4. 
+3. 会使用腾讯云的Serverless以后，其他服务商的Serverless也会了吗？ 是的
+
+## 三分钟搭建部署我们的Serverless应用
+这里主要给大家介绍是如何通过Serverless Framework 提供的云函数SCF组件快速创建于部署一个云函数项目。
+### 前提条件
+Serverless Framework帮助您将项目快速部署到腾讯云Framework平台。因此在部署前，清确认您已经注册腾讯云账号并完成实名认证
+
+```
+1. 安装Serverless
+npm install -g serverless
+serverless -v
+
+2. 创建项目 - 自己要创建项目的目录上面运行Serverless
+serverless
+
+3. 部署 - 在Serverless.yml文件所在的项目根目录，运行以下指令进行部署
+serverless deploy
+```
 
 
 
