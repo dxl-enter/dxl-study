@@ -89,3 +89,40 @@ TypeArray
 
 ```
 
+## 7. ES6 Map 与 Set
+* Set 对象
++ Set 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。
+* Set 中的特殊值
++ Set 对象存储的值总是唯一的，所以需要判断两个值是否恒等。有几个特殊值需要特殊对待：
++ +0 与 -0 在存储判断唯一性的时候是恒等的，所以不重复；
++ undefined 与 undefined 是恒等的，所以不重复；
++ NaN 与 NaN 是不恒等的，但是在 Set 中只能存一个，不重复。
+
+* Set 对象作用
+```
+数组去重
+var mySet = new Set([1, 2, 3, 4, 4]);
+[...mySet]; // [1, 2, 3, 4]
+```
+
+```
+并集
+var a = new Set([1, 2, 3]);
+var b = new Set([4, 3, 2]);
+var union = new Set([...a, ...b]); // {1, 2, 3, 4}
+```
+
+```
+交集
+var a = new Set([1, 2, 3]);
+var b = new Set([4, 3, 2]);
+var intersect = new Set([...a].filter(x => b.has(x))); // {2, 3}
+```
+
+```
+差集
+var a = new Set([1, 2, 3]);
+var b = new Set([4, 3, 2]);
+var difference = new Set([...a].filter(x => !b.has(x))); // {1}
+```
+
