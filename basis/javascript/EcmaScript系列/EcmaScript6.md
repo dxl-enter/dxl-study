@@ -97,3 +97,14 @@
       import j from "j"
 ### 4. ES6编程风格【下】
     async await： 
+    
+### 5. ES6深度克隆
+    (1)拷贝数据
+      基本数据类型：拷贝后会生成一份新的数据，修改拷贝后的数据不会影响原数据
+      对象/数组：拷贝后不会生成新的数据，而是拷贝的引用。修改拷贝后的数据会影响原来的数据
+    (2)拷贝数据的方法
+      1. 直接赋值给一个变量
+      2. Object.assign()
+      3. Array.prototype.concat()
+      4. Array.prototype.slice()
+      5. JSON.parse(JSON.stringify())
