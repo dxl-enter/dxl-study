@@ -108,3 +108,7 @@
       3. Array.prototype.concat() // 浅拷贝
       4. Array.prototype.slice()  // 浅拷贝
       5. JSON.parse(JSON.stringify())   // 深拷贝，拷贝的数据里不能有函数，处理不了（原因是JSON只能针对原生js的object和array数据）
+    (3)浅拷贝（对象和数组）
+      特点：拷贝的引用，修改拷贝以后的数据会影响原数据
+    (4)深拷贝（深度克隆）
+      特点：拷贝的时候生成新数据，修改拷贝以后的数据不会影响原数据
