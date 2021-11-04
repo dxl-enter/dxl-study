@@ -103,8 +103,8 @@
       基本数据类型：拷贝后会生成一份新的数据，修改拷贝后的数据不会影响原数据
       对象/数组：拷贝后不会生成新的数据，而是拷贝的引用。修改拷贝后的数据会影响原来的数据
     (2)拷贝数据的方法
-      1. 直接赋值给一个变量
-      2. Object.assign()
-      3. Array.prototype.concat()
-      4. Array.prototype.slice()
-      5. JSON.parse(JSON.stringify())
+      1. 直接赋值给一个变量   // 浅拷贝
+      2. Object.assign()    // 浅拷贝
+      3. Array.prototype.concat() // 浅拷贝
+      4. Array.prototype.slice()  // 浅拷贝
+      5. JSON.parse(JSON.stringify())   // 深拷贝，拷贝的数据里不能有函数，处理不了（原因是JSON只能针对原生js的object和array数据）
