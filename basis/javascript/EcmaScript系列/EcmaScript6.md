@@ -109,6 +109,21 @@
       4. Array.prototype.slice()  // 浅拷贝
       5. JSON.parse(JSON.stringify())   // 深拷贝，拷贝的数据里不能有函数，处理不了（原因是JSON只能针对原生js的object和array数据）
     (3)浅拷贝（对象和数组）
-      特点：拷贝的引用，修改拷贝以后的数据会影响原数据
+      特点：拷贝的引用，修改拷贝以后的数据会影响原数据，使得原数据不安全。
     (4)深拷贝（深度克隆）
       特点：拷贝的时候生成新数据，修改拷贝以后的数据不会影响原数据
+    (5)如何实现深度拷贝（克隆）
+      浅拷贝的原理是：拷贝的数据里有对象/数据，因此我们要求拷贝的数据里不能有对象/数组
+      即使有对象、数组可以继续遍历对象、数组拿到里面每一项值，知道拿到是基本数据类型，然后再去拷贝，就是深度拷贝
+    (6)知识点
+      如何判断数据类型 arr---> Array null ---> Null
+      1. typeof返回的数据类型：String，Number，Boolean，Undefined，Function
+      2. Object.prototype.toString.call(obj)
+      3. for...in循环对象
+      
+      ```
+      let result = 'abcd';
+      result = null;
+      result = [1,3];
+      console.log(Object.prototype.toString.call(result).slice(8,-1))
+      ```
