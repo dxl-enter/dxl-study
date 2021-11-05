@@ -122,8 +122,8 @@
       3. for...in循环对象
       
       ```
-      let result = 'abcd';
-      result = null;
-      result = [1,3];
+      let result = 'abcd';  // String
+      result = null;     // Null
+      result = [1,3];    // Array
       console.log(Object.prototype.toString.call(result).slice(8,-1))
       ```
