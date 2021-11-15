@@ -35,5 +35,17 @@
 4. 深层次嵌套（不确定嵌套多深）
   * 依赖注入   provide/inject  不推荐直接用于应用程序代码中，主要是为了高阶组件/组件库提供用例
   * 2.4中新增的属性：$attrs/inheritAttrs(没有申明任何props)
-5. 
+
+## 组件通深入
+1. slot
+ * 普通插槽
+ * 具名插槽：v-slot 配合 name 使用
+
+```
+// v-slot 需要绑定在template模板上，如果使用在html标签上会报错 v-slot can only be used on componebts or <template>
+<slot name="header"></slot>
+// 使用
+<template v-slot:header><p>dfhhhfhgfhgfhgfh</p></template>
+```
+2. 
 
