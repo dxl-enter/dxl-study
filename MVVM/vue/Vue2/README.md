@@ -19,8 +19,18 @@
     data:{ bus }
    }
   })
+  3. 将bus抽离出来，组件有需要时引用，推荐
+  const bus = new Vue();
+  export default bus
   ```
   
-  * 
+  * vuex状态管理  state 状态管理
+  * 不是方法的方法  通过父组件进行过滤
+  
+   ```
+   使用：
+    子组件A通过事件$emit传值给父组件
+    父组件通过属性props传值给子组件B
+   ```
 4. 
 
