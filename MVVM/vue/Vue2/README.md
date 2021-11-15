@@ -47,5 +47,13 @@
 // 使用
 <template v-slot:header><p>dfhhhfhgfhgfhgfh</p></template>
 ```
+
+ * 作用域插槽：让插槽内容可以访问到子组件中才有的数据
+
+```
+<slot name="header" :lastName="lastName">{{firstName}}</slot>
+// 使用
+<template v-slot:header="slotProps"><p>{{slotProps.lastName}}</p></template>
+```
 2. 
 
