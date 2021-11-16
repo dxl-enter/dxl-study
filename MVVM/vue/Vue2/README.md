@@ -81,6 +81,16 @@
    updated：节点更新时
    componentUpdated：组件节点更新时
    unbind：只调用一次，指令与元素解绑时触发
- * 
-4. 
+ * 需求 ：通过自定义指令实现fixed布局固定
+ 
+ ```
+ Vue.directive('fixed',{
+  inserted(el){
+   el.style.position = "fixed";
+   el.style.top = "50px"
+  }
+ })
+ 
+ <input v-fixed type="text" placehoder="请输入内容" />
+ ```
 
