@@ -55,5 +55,8 @@
 // 使用
 <template v-slot:header="slotProps"><p>{{slotProps.lastName}}</p></template>
 ```
-2. 
+2. 动态组件
+ * component is属性
+ * 组件缓存 keep-alive
+3. 
 
