@@ -58,5 +58,29 @@
 2. 动态组件
  * component is属性
  * 组件缓存 keep-alive
-3. 
+3. 指令
+ * 内嵌指令
+ * 自定义指令：
+   需求：页面中有个输入框，页面加载获得焦点事件，autofocus存在兼容性问题
+   实现：
+      自定义指令
+ 
+ ```
+ Vue.directive('focus',{
+  inserted:function(el){
+   el.focus();
+  }
+ })
+ 
+ <input v-focus type="text" placehoder="请输入内容" />
+ ```
+ 
+ * 自定义指令钩子函数
+   bind: 只会调用一次，初始化
+   inserted：绑定元素插入父节点时调用
+   updated：节点更新时
+   componentUpdated：组件节点更新时
+   unbind：只调用一次，指令与元素解绑时触发
+ * 
+4. 
 
