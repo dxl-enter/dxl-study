@@ -9,13 +9,13 @@
   * 前端路由
     + hash模式（#）：默认模式，页面不会重新加载
 
-```
-if("onhashchange" in window){
- window.onhashchange = () => {
-  console.log(this.location.hash)
- }
-}
-```
+    ```
+    if("onhashchange" in window){
+     window.onhashchange = () => {
+      console.log(this.location.hash)
+     }
+    }
+    ```
    
     + history模式（不会有#）：2014年html5标准发布多了两个api，一个是pushState 一个是replaceState
     + 都对历史记录有修改功能：back，forward，go
