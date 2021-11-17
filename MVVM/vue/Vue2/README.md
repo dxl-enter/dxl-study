@@ -96,5 +96,5 @@
  
  4. 查看vue-cli合并之后的webpack配置文件
  npx vue-cli-webpack inspect --mode development
-
+ npx vue-cli-webpack inspect --mode development >> wenpack.config.production.js 输出到指定的文件
 
