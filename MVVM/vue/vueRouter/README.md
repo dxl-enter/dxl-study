@@ -23,4 +23,13 @@
 2. 如何使用
  * script方式   不推荐
  * npm install vue-router --save  推荐
+ * 兜底路由(必须放在routes的最下面)
+
+ ```
+ {
+  path:"**",
+  redirect: 'home'
+ }
+ ```
+ 
 3. 路由的一些只是，开发中必须掌握的一些知识
