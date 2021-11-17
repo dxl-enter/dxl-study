@@ -7,8 +7,17 @@
     + 单页面应用spa：单个html文件，通过路由实现跳转，更新视图而不会重新请求页面
     + 多页面应用mpa：多个html文件，通过a链接实现跳转，会有白屏的问题
   * 前端路由
-    + hash模式：默认模式，页面不会重新加载
-    + history模式：
+    + hash模式（#）：默认模式，页面不会重新加载
+
+```
+if("onhashchange" in window){
+ window.onhashchange = () => {
+  console.log(this.location.hash)
+ }
+}
+```
+
+    + history模式（不会有#）：2014年html5标准发布多了两个api，一个是pushState 一个是replaceState
   * 
 2. 如何使用
 3. 路由的一些只是，开发中必须掌握的一些知识
