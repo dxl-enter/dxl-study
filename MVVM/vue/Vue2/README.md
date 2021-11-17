@@ -93,4 +93,8 @@
  
  <input v-fixed type="text" placehoder="请输入内容" />
  ```
+ 
+ 4. 查看vue-cli合并之后的webpack配置文件
+ npx vue-cli-webpack inspect --mode development
+
 
