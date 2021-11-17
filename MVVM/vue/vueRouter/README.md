@@ -25,11 +25,21 @@
  * npm install vue-router --save  推荐
  * 兜底路由(必须放在routes的最下面)
 
- ```
- {
-  path:"**",
-  redirect: 'home'
- }
- ```
+  ```
+  {
+   path:"**",
+   redirect: 'home'
+  }
+  ```
+ 
+  * 监听路由
+
+  ```
+  watch:{
+   $route(to,from){
+    console.log((to.params.name,from.path)
+   }
+  }
+  ```
  
 3. 路由的一些只是，开发中必须掌握的一些知识
