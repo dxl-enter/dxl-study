@@ -21,4 +21,6 @@
     + 都对历史记录有修改功能：back，forward，go
   * 
 2. 如何使用
+ * script方式   不推荐
+ * npm install vue-router --save  推荐
 3. 路由的一些只是，开发中必须掌握的一些知识
