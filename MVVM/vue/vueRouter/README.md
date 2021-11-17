@@ -17,6 +17,8 @@ if("onhashchange" in window){
 }
 ```
 
+
+
     + history模式（不会有#）：2014年html5标准发布多了两个api，一个是pushState 一个是replaceState
   * 
 2. 如何使用
