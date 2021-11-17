@@ -24,8 +24,11 @@
 五. 更易于开发使用
   1. Exposed reactivity API
     
+    
     * Provide standalone APIs for creating and observing reactive state
     我们众所周知，vue的核心竞争力是通过Object.defineProperty get/set改良了当时MVVM脏检查和get/set函数开始的，如今vue3.0使用es6中proxy这种代理模式升级成为reactivity api这种响应式的zpi
+    
+    
     ``` 
     import {observable, effect} from 'vue'
     const state = observable({
@@ -39,8 +42,10 @@
     state.count++  // count is: 1
     ```
     
+    
     * easily identify why a componebt is re-rendering
     在3.0版本中新增了两个新的狗子函数onRenderTracked和onRenderTriggered，它使我们能够知道是什么导致了Vue实例中的重新渲染。
+
 
     ```
     const Component = {
@@ -50,8 +55,10 @@
     }
     ```
     
+    
     * improved typescript support w/TSX
     在3.0版本中在编译阶段就能找到好多错误
+
 
     ```
     interface HelloProps {
@@ -70,4 +77,3 @@
     }
     ```
     
-  2. 
