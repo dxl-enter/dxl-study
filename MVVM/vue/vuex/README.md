@@ -52,4 +52,19 @@
   
 4. actions(mapActions)：进行异步处理，在vue中methods使用
 
+  ```
+  // 调用方式1：
+  methods:{
+    handleAction(){
+      this.$store.dispatch("modifyCount")
+    }
+  }
+  
+  // 调用方式2：推荐
+  import {mapActions} from "vuex"
+  methods:{
+    ...mapActions({handleAction: 'modifyCount'})
+  }
+  ```
+  
 5. modules：模块化
