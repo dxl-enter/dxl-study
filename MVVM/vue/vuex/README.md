@@ -29,11 +29,27 @@
   import {mapGetters} from "vuex"
   computed:{
     ...mapGetters(["filterList"])
+    // ...mapGetters({arr: "filterList",newVal:state=>{state.newState?state.newState:'还没有添加新值'}})
   }
   ```
   
-3. mutations(mapMutations)：唯一改变state的方式
+3. mutations(mapMutations)：唯一改变state的方式,配合commit使用，在vue中methods使用。要遵循vue的响应规则，必须是同步函数
 
-4. actions(mapActions)：进行异步处理
+  ```
+  // 调用方式1：
+  methods:{
+    handle(){
+      this.$store.commit("add")
+    }
+  }
+  
+  // 调用方式2：推荐
+  import {mapMutations} from "vuex"
+  methods:{
+    ...mapMutations({handleReduce: 'add'})
+  }
+  ```
+  
+4. actions(mapActions)：进行异步处理，在vue中methods使用
 
 5. modules：模块化
