@@ -68,3 +68,33 @@
   ```
   
 5. modules：模块化
+
+  * 默认:modules\actions\getters 都是注册在全局上的，可以直接调用
+  * 只有state是注册在不同的模块上面的
+  * namespaced：true情况下，modules\actions\getters 是注册在局部上的
+
+
+  ```
+  // 获取方式：
+  computed:{
+    moduleName(){
+      this.$store.state.moduleA.name
+    }
+  }
+  
+  // 如果模块moduleA中要使用全局的属性应该怎么办？---rootState
+  // 在 moduleA的store
+  actions:{
+    modifyName({state,commit,rootState}){
+      console.log(state。name,rootState.count)
+      commit("subAdd")
+    }
+  }
+    // 调用方式1：
+  methods:{
+    handleAction(){
+      this.$store.dispatch("modifyName")
+    }
+  }
+  ```
+  
