@@ -20,7 +20,7 @@
   ```
   // 获取方式1：
   computed:{
-    getArr(){
+    filterList(){
       this.$store.gettters.filterList
     }
   }
