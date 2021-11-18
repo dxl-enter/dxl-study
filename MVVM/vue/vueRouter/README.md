@@ -41,5 +41,10 @@
    }
   }
   ```
+  
+  * 传参
+   + params：只能name引入路由，不能path引入（用了path，params参数回自动忽略）
+   + query：path、name都可以
+   
  
 3. 路由的一些只是，开发中必须掌握的一些知识
